@@ -1,0 +1,133 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  /* Gradient overlay + background image */
+  background: radial-gradient(circle at top, rgba(11, 61, 32, 0.7),  rgba(27, 67, 50, 0.9)), 
+               url('images/forest.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  position: relative;
+}
+
+
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #2d6a4f;
+  width: 100%;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.7rem;
+   color: #d8f3dc;
+  text-shadow: 0 0 10px #95d5b2, 0 0 20px #74c69d;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #b7e4c7;
+}
+
+.gallery {
+  display: grid;
+   padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 1.5rem;
+  max-width: 1200px;
+   width: 100%;
+  position: relative; 
+}
+
+
+.card {
+    text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(8px) scale(1.05);
+  box-shadow: 0 0 20px #74c69d;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+   border-radius: 10px;
+   object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  color: #d8f3dc;
+}
+
+/* Info panel */
+.info-panel {
+  background: rgba(0,  0, 0, 0.6);
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  max-width: 800px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #52b788;
+  box-shadow: 0 0 10px #2d6a4f;
+
+  position: relative;
+  margin: 2rem auto;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  background: rgba(0, 0, 0, 0.4 );
+  border-top: 2px solid #2d6a4f;
+   width: 100%;
+  margin-top: auto;
+  position: relative;
+}
+
+
+.firefly {
+  position: absolute;
+  width: 7px;
+  height: 6px;
+   background: yellow;
+  border-radius: 50%;
+  animation: fly 12s linear infinite;
+  box-shadow: 0 0 10px yellow, 0 0 20px yellow;
+ 
+}
+
+@keyframes fly {
+  0%   { transform: translate(0, 0) scale(1);  opacity: 0.8; }
+  25%  { transform: translate(200px,  150px ) scale(1.2); opacity: 0.5; }
+  50%  { transform:  translate(-150px, 300px) scale(0.8); opacity: 1; }
+  75%  { transform: translate(250px,  -200px) scale(1.1); opacity: 0.6; }
+  100% { transform:  translate(0, 0) scale(1);  opacity: 0.9; }
+}
