@@ -26,7 +26,7 @@ An interactive forest-themed website where you can explore animals, trees, and g
 ├ index.html
 ├ styles.css
 ├ script.js
-└ images
+├ images
     
 
 Made with ❤️ & a touch of magic!
